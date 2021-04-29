@@ -13,6 +13,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
+        //primera versión
         Empleado empleados[];
         empleados = new Empleado[5];
 
@@ -29,5 +30,16 @@ public class Principal {
         }
 
         System.out.println("El sueldo total es: " + totalSueldo);
+        
+        //segunda versión
+        Empleados plantilla = new Empleados(5);
+        
+        plantilla.addEmpleado(new Empleado("Pepito", "Palotes Palotes", 100.50f), 0);
+        plantilla.addEmpleado(new Empleado("Manolo", "Del Bombo", 200.25f), 1);
+        plantilla.addEmpleado(new Empleado("Rosita", "Del Pueblo", 340.10f), 2);
+        plantilla.addEmpleado(new Empleado("Teresa", "La Guapa", 40.15f), 3);
+        plantilla.addEmpleado(new Empleado("Carlos", "El Alto", 500.70f), 4);
+        
+        System.out.println("El sueldo total es: " + plantilla.calcularSueldoTotal());
     }
 }
